@@ -1,6 +1,8 @@
 package Sorts;
 
-public class BogoSort{
+
+
+public class BogoSort<T>{
     public static void sort(int[] arr){
         while(!isSorted(arr)){
             shuffle(arr);
