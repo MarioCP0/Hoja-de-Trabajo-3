@@ -20,8 +20,8 @@ public class App {
         MergeSort <Integer> merge = new MergeSort<Integer>();
         merge.sort(arr4);
         
-        // Integer[] arr5 = arr.clone();
-        // BogoSort<Integer> bogo = new BogoSort<Integer>();
-        // bogo.sort(arr5);
+        Integer[] arr5 = arr.clone();
+        BogoSort<Integer> bogo = new BogoSort<Integer>();
+        bogo.sort(arr5);
     }
 }
