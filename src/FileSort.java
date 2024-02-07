@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class FileSort {
     static final String Path = "datos.txt";
-    public static int[] loadfile(){
+    public static Integer[] loadfile(){
         ArrayList<Integer> list = new ArrayList<Integer>();
         try{
             BufferedReader br = new BufferedReader(new FileReader(Path));
@@ -19,7 +19,7 @@ public class FileSort {
         }catch(IOException e){
             e.printStackTrace();
         }
-        int[] arr = new int[list.size()];
+        Integer[] arr = new Integer[list.size()];
         for(int i = 0; i < list.size(); i++){
             arr[i] = list.get(i);
         }

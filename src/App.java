@@ -1,42 +1,27 @@
 import Sorts.*;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        int[] arr = FileSort.loadfile();
-        System.out.println("Unsorted array: ");
-        for(int i = 0; i < arr.length; i++){
-            System.out.print(arr[i] + " ");
-        }
+    public static void main(String[] args){
+        Integer[] arr = FileSort.loadfile();
 
-        int[] arr2 = arr.clone();
-        Quicksort.quicksort(arr2, 0, arr.length - 1);
-        for (int i = 0; i < arr2.length; i++) {
-            System.out.print(arr2[i] + " ");
-        }
+        Integer[] arr1 = arr.clone();
+        Quicksort<Integer> quick = new Quicksort<Integer>();
+        quick.sort(arr1);
 
-        int[] arr3 = arr.clone();
-        MergeSort.sort(arr3, 0, arr.length - 1);
-        for (int i = 0; i < arr3.length; i++) {
-            System.out.print(arr3[i] + " ");
-        }
+        Integer[] arr2 = arr.clone();
+        GnomeSort<Integer> gnome = new GnomeSort<Integer>();
+        gnome.sort(arr2);
 
-        int[] arr4 = arr.clone();
-        RadixSort.sort(arr4);
-        for (int i = 0; i < arr4.length; i++) {
-            System.out.print(arr4[i] + " ");
-        }
+        Integer[] arr3 = arr.clone();
+        RadixSort<Integer> radix = new RadixSort<Integer>();
+        radix.sort(arr3);
 
-        int[] arr5 = arr.clone();
-        GnomeSort.sort(arr5);
-        for (int i = 0; i < arr5.length; i++) {
-            System.out.print(arr5[i] + " ");
-        }
-
-        int[] arr6 = arr.clone();
-        BogoSort.sort(arr6);
-        for (int i = 0; i < arr6.length; i++) {
-            System.out.print(arr6[i] + " ");
-        }
-
+        Integer[] arr4 = arr.clone();
+        MergeSort <Integer> merge = new MergeSort<Integer>();
+        merge.sort(arr4);
+        
+        // Integer[] arr5 = arr.clone();
+        // BogoSort<Integer> bogo = new BogoSort<Integer>();
+        // bogo.sort(arr5);
     }
 }
