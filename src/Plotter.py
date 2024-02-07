@@ -47,9 +47,8 @@ def plot():
 
 
     for ax in axs.flat:
-        ax.set(xlabel="Input Size", ylabel="Time (ms)")
+        ax.set(xlabel="Input Size", ylabel="Time (ns)")
 
-    plt.suptitle("Time Complexity Analysis of Sorting Algorithms")
     plt.tight_layout()
     plt.show()
 
