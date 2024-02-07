@@ -3,6 +3,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashMap;
 
 
 public class FileSort {
@@ -25,6 +29,7 @@ public class FileSort {
         }
         return arr;
     }
+
     public static void PutRandomNumbers(int n){
         try{
             java.io.PrintWriter output = new java.io.PrintWriter(Path);
@@ -35,5 +40,30 @@ public class FileSort {
         }catch(IOException e){
             e.printStackTrace();
         }
+    }
+
+    public static Integer[] CreateRandomArray(int n){
+        Integer[] arr = new Integer[n];
+        for(int i = 0; i < n; i++){
+            arr[i] = (int)(Math.random() * 1000);
+        }
+        return arr;
+    }
+
+    public static void SaveTimeCSV(HashMap<String, HashMap<String, Integer[]>> TimesInMsPerComplexity){
+        try{
+            FileWriter csvWriter = new FileWriter("times.csv");
+            csvWriter.append("Sort,Complexity,Time\n");
+            for(String sort : TimesInMsPerComplexity.keySet()){
+                for(String complexity : TimesInMsPerComplexity.get(sort).keySet()){
+                    csvWriter.append(sort + "," + complexity + "," + TimesInMsPerComplexity.get(sort).get(complexity)[0] + "\n");
+                }
+            }
+            csvWriter.flush();
+            csvWriter.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
     }
 }
