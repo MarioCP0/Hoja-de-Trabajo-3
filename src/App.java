@@ -4,6 +4,7 @@ public class App {
     public static void main(String[] args){
         Integer[] arr = FileSort.loadfile();
 
+        for (int m = 0; m < arr.length; m++) {
         Integer[] arr1 = arr.clone();
         Quicksort<Integer> quick = new Quicksort<Integer>();
         quick.sort(arr1);
@@ -20,8 +21,9 @@ public class App {
         MergeSort <Integer> merge = new MergeSort<Integer>();
         merge.sort(arr4);
         
-        Integer[] arr5 = arr.clone();
-        BogoSort<Integer> bogo = new BogoSort<Integer>();
-        bogo.sort(arr5);
+        // Integer[] arr5 = arr.clone();
+        // BogoSort<Integer> bogo = new BogoSort<Integer>();
+        // bogo.sort(arr5);
+        }
     }
 }

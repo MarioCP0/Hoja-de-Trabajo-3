@@ -18,8 +18,8 @@ public class MergeSort<T extends Comparable<T>> {
         int n1 = m - l + 1;
         int n2 = r - m;
 
-        T[] L = (T[]) new Object[n1];
-        T[] R = (T[]) new Object[n2];
+        T[] L = (T[]) new Comparable[n1];
+        T[] R = (T[]) new Comparable[n2];
 
         for (int i = 0; i < n1; i++) {
             L[i] = arr[l + i];
@@ -31,7 +31,7 @@ public class MergeSort<T extends Comparable<T>> {
         int i = 0, j = 0;
         int k = l;
         while (i < n1 && j < n2) {
-            if (((Comparable<T>) L[i]).compareTo(R[j]) <= 0) {
+            if (L[i].compareTo(R[j]) <= 0) {
                 arr[k] = L[i];
                 i++;
             } else {

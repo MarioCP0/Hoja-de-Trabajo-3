@@ -16,7 +16,7 @@ public class RadixSort<T extends Comparable<T>> {
 
     private void countSort(T[] arr, int n, int exp) {
         T[] output = (T[]) new Comparable[n];
-        int[] count = new int[10];~
+        int[] count = new int[10];
         for (int i = 0; i < n; i++) {
             count[((int) arr[i] / exp) % 10]++;
         }
