@@ -45,7 +45,7 @@ public class FileSort {
     public static Integer[] CreateRandomArray(int n){
         Integer[] arr = new Integer[n];
         for(int i = 0; i < n; i++){
-            arr[i] = (int)(Math.random() * 1000);
+            arr[i] = (int)(Math.random() * 10000000);
         }
         return arr;
     }

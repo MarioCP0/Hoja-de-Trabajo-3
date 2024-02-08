@@ -14,7 +14,7 @@ public class App {
         RadixSort<Integer> radix = new RadixSort<Integer>();
         MergeSort<Integer> merge = new MergeSort<Integer>();
 
-        for (int i = 1; i < 5001; i++) {
+        for (int i = 1; i < 100001; i++) {
 
             FileSort.PutRandomNumbers(i);
             Integer[] arr = FileSort.CreateRandomArray(i);
